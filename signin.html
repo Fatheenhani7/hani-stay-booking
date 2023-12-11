@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANI STAY - Sign In</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="banner">
+     <nav>
+        <img src="logo.png" alt="logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="branch.html">Hotel Branches</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a class="active" href="#home"><img src="1.png" alt="signin" class="signin"></a></li>
+        </ul>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+     </nav>
+     <main>
+     <div class="container">
+        <h1>Sign Up / Sign In</h1>
+        
+        <!-- Sign Up -->
+        <form id="signup-form" action="#" method="POST" class="signup">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        
+        <!-- Sign In -->
+        <form id="signin-form" action="#" method="POST" class="sign">
+            <label for="signin-email">Email:</label>
+            <input type="email" id="signin-email" name="email" required>
+            
+            <label for="signin-password">Password:</label>
+            <input type="password" id="signin-password" name="password" required>
+            
+            <button type="submit">Sign In</button>
+        </form>
+        
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+</main>
+     <footer>
+        <p>&copy; 2023 HANI STAY. All rights reserved.</p>
+    </footer>
+    </div>
+    <script src="humburger.js"></script>
+</body>
+</html>

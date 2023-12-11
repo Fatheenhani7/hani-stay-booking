@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0; 
+    color: rgb(255, 230, 0);
+}
+
+
+.banner{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) ,url('abstract-blur-luxury-hotel-lobby-and-lounge-for-background-free-photo.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+.logo{
+    width: 140px;
+    cursor: pointer;
+
+}
+
+nav {
+    width: 85%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li::after{
+    content: '';
+    height: 5px;
+    width: 0%;
+    background: #FF5F1F;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+}
+
+nav ul li:hover::after{
+    width: 100%;  
+}
+
+main {
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.signin{
+    margin-right: auto;
+    width: 30px;
+}
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #FF5F1F;
+    margin: 6px 0;
+}
+
+.menu-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+
+.menu-link:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Basic styling for the container */
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.sign{
+    background-color: transparent;
+    border: 2px solid #cacaca;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup{
+    background-color: transparent;
+    border: 2px solid #cacaca;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    background-color: #FF5F1F;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Form and input styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Navigation Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .banner {
+        background-size: auto; 
+    }
+}
+
+/* for signin */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .sign, .signup {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    h1 {
+        margin-bottom: 10px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 12px;
+    }
+    
+    button[type="submit"] {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANI STAY - Booking</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="banner">
+     <nav>
+        <img src="logo.png" alt="logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="branch.html">Hotel Branches</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a class="active" href="#booking">Bookings</a></li>
+            <li><a href="signin.html"><img src="1.png" alt="signin" class="signin"></a></li>
+        </ul>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+     </nav>
+     <br><br>
+     <main>
+        <!-- Book hotel room -->
+        <section class="booking-form1">
+            <h2>Book a Hotel Room</h2><br>
+
+            <div id="costTable1">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category </th>
+                            <th>Cost per Day (LKR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Single Room</td>
+                            <td>25,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>Double Room</td>
+                            <td>35,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>Triple Room</td>
+                            <td>40,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>Kids above 5 years of age</td>
+                            <td>5000.00 extra for meals</td>
+                        </tr>
+                        <tr>
+                            <td>Extra Bed</td>
+                            <td>5000.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><br>
+
+        <form  id="hotelBookingForm"> 
+
+        <label for="customerName" class="ChooseRoom">Name:</label><br>
+        <input type="text" id="customerName" name="customerName" required>
+
+        <label for="customerPhone" class="ChooseRoom">Phone Number:</label><br>
+        <input type="tel" id="customerPhone" name="customerPhone" pattern="[0-9]{10}" required>
+
+
+        <label for="check-in"  class="ChooseRoom">Check-in Date</label><br>
+        <input type="date" id="check-in" name="check-in" required>
+
+        <label for="check-out"  class="ChooseRoom">Check-out Date</label><br>
+        <input type="date" id="check-out" name="check-out" required>
+
+        <label class="ChooseRoom">Choose Room Type:</label><br>
+        <label for="singleRoom">
+            <input type="checkbox" id="singleRoom" name="roomType" value="single"> Single Room
+        </label>
+        <label for="numberOfSingleRooms">Number of Single Rooms</label>
+        <input type="number" id="numberOfSingleRooms" name="numberOfSingleRooms" min="0" value="0">
+
+        <label for="doubleRoom">
+            <input type="checkbox" id="doubleRoom" name="roomType" value="double"> Double Room
+        </label>
+        <label for="numberOfDoubleRooms">Number of Double Rooms</label>
+        <input type="number" id="numberOfDoubleRooms" name="numberOfDoubleRooms" min="0" value="0">
+
+        <label for="tripleRoom">
+            <input type="checkbox" id="tripleRoom" name="roomType" value="triple"> Triple Room
+        </label>
+        <label for="numberOfTripleRooms">Number of Triple Rooms</label>
+        <input type="number" id="numberOfTripleRooms" name="numberOfTripleRooms" min="0" value="0">
+<br><br>
+        <label for="numberOfAdults" class="ChooseRoom">Number of Adults:</label>
+        <br>
+        <input type="number" id="numberOfAdults" name="numberOfAdults" min="1" value="1">
+
+        <label for="numberOfChildren" class="ChooseRoom">Number of Children:</label>
+        <br>
+        <input type="number" id="numberOfChildren" name="numberOfChildren" min="0" value="0">
+
+        <label class="ChooseRoom" id="ExtraRequirements">Extra Requirements:</label><br>
+        <label for="extraMeal">
+            <input type="checkbox" id="extraMeal" name="extraRequirements" value="extraMeal"> Extra Meal
+        </label>
+        <label for="extraBed">
+            <input type="checkbox" id="extraBed" name="extraRequirements" value="extraBed"> Extra Bed
+        </label>
+        <label for="wifi">
+            <input type="checkbox" id="wifi" name="extraRequirements" value="wifi"> Wi-Fi
+        </label>
+        <label for="poolView">
+            <input type="radio" id="poolView" name="extraRequirements" value="poolView"> Pool View
+        </label>
+        <label for="gardenView">
+            <input type="radio" id="gardenView" name="extraRequirements" value="gardenView"> Garden View
+        </label><br>
+
+        <label for="promoCode" class="ChooseRoom">Enter Promo Code:</label>
+        <input type="text" id="promoCode" name="promoCode"><br><br>
+
+
+        <div class="button-container">
+            <button type="button" id="RoomBook">Book Now</button>
+            <button type="button" id="CheckLoyalty">Check Loyalty</button>
+            <button type="button" id="ClearButton">Clear</button>
+        </div>
+
+                <div id="DisplayBookNow"></div>
+                <div id="DisplayLoyaltyPoints"></div>
+            </form>
+        </section>
+
+        <div id="space"></div>
+
+        <!-- Book an adventure -->
+        <section class="booking-form2">
+            <h2>Book an Adventure</h2>
+            <div id="costTable2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category </th>
+                            <th>Cost per Category (LKR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Diving for local Adults (1 hr)</td>
+                            <td>5,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>Diving for local kids (above 5 years)</td>
+                            <td>2,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>Diving for foreign adults </td>
+                            <td>10,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>Diving for foreign kids (above 5 years)</td>
+                            <td>5,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>Guide during the diving session (Adult)</td>
+                            <td>1,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>Guide during the diving session (Kid)</td>
+                            <td>500.00</td>
+                    </tbody>
+                </table>
+            </div><br>
+            <form>
+                <label for="customerName" class="ChooseRoom">Name:</label><br>
+                <input type="text" id="AdventureCustomer" name="customerName" required>
+
+                <label for="customerPhone" class="ChooseRoom">Phone Number:</label><br>
+                <input type="tel" id="AdventurePhone" name="customerPhone" pattern="[0-9]{10}" required>
+
+                <label class="ChooseRoom">Select Adventure:</label><br>
+                <label for="Swimmingpool">
+                <input type="radio" id="Swimmingpool" name="adventure" value="Swimmingpool" required> Swimmingpool
+                </label>
+
+                <label for="Beach">
+                <input type="radio" id="Beach" name="adventure" value="Beach" required> Beach
+                </label>
+
+                <label for="Lake">
+                <input type="radio" id="Lake" name="adventure" value="Lake" required> Lake
+                </label><br>
+
+                <label class="ChooseRoom">Select Your Category (Per 1 hour): </label><br>
+                <label for="localAdultDiving">
+                <input type="checkbox" id="localAdultDiving" name="adventure" value="localAdultDiving" required> Diving for local Adults
+                </label>
+                <input type="number" id="localAdultDivingParticipants" name="localAdultDivingParticipants" min="1" value="1" required>
+                <label for="localKidDiving">
+                <input type="checkbox" id="localKidDiving" name="adventure" value="localKidDiving" required> Diving for local kids (above 5 years)
+                </label>
+                <input type="number" id="localKidDivingParticipants" name="localKidDivingParticipants" min="1" value="1" required>
+                <label for="foreignAdultDiving">
+                <input type="checkbox" id="foreignAdultDiving" name="adventure" value="foreignAdultDiving" required> Diving for foreign adults
+                </label>
+                <input type="number" id="foreignAdultDivingParticipants" name="foreignAdultDivingParticipants" min="1" value="1" required>
+                <label for="foreignKidDiving">
+                <input type="checkbox" id="foreignKidDiving" name="adventure" value="foreignKidDiving" required> Diving for foreign kids (above 5 years)
+                </label>
+                <input type="number" id="foreignKidDivingParticipants" name="foreignKidDivingParticipants" min="1" value="1" required><br><br>
+                
+                <label class="ChooseRoom">Include a Guide: </label><br>
+                <label for="guideAdultCheckbox"> 
+                <input type="checkbox" id="guideAdultCheckbox"> Guide for Adults</label>
+
+                <label for="guideChildrenCheckbox"> 
+                <input type="checkbox" id="guideChildrenCheckbox"> Guide for Children</label><br>
+        
+                <button type="button" id="AdventureBook">Book Adventure</button>
+                <button type="button" id="AddToFavorite">Add to Favorite</button>
+
+                <div id="DisplayAdventureBookings"></div>
+            </form>
+        </section>
+        
+      
+        
+    </main>
+    <br><br><br><br>
+    <footer>
+        <p>&copy; 2023 HANI STAY. All rights reserved.</p>
+    </footer>
+    </div>
+    <script src="booking.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0; 
+    color: rgb(255, 230, 0);
+}
+
+.banner{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) ,url('abstract-blur-luxury-hotel-lobby-and-lounge-for-background-free-photo.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+.logo{
+    width: 140px;
+    cursor: pointer;
+
+}
+
+nav {
+    width: 85%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li::after{
+    content: '';
+    height: 5px;
+    width: 0%;
+    background: #FF5F1F;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+}
+
+nav ul li:hover::after{
+    width: 100%;  
+}
+
+main {
+    padding: 8px;
+}
+
+.signin{
+    margin-right: auto;
+    width: 30px;
+}
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #FF5F1F;
+    margin: 6px 0;
+}
+
+.menu-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+
+.menu-link:hover {
+    background-color: #0056b3;
+}
+
+
+/* homepage */
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.lobby {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.intro h2 {
+    color: #FF5F1F;
+    font-size: 28px;
+}
+
+/* Sub-sections */
+.sub-section {
+    margin-top: 2rem;
+    padding: 20px;
+    text-align: center;
+}
+
+.sub-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Post containers */
+.post-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.post {
+    background-color: #fc7100;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(218, 105, 105, 0.1);
+    transition: transform 0.2s;
+    width: 35%; 
+    display: flex;
+    margin: auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.post:hover {
+    transform: scale(0.98);
+    background-color: #fa9624;
+}
+
+.post ul, .post ol {
+    color: #000;
+    font-size: 18px;
+    list-style: inside;
+    text-align: center;
+}
+
+
+
+
+
+  /* Responsive Navigation Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .banner {
+        background-size: auto; 
+    }
+}
+
+  

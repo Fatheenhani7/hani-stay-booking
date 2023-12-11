@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0; 
+    color: rgb(255, 230, 0);
+}
+
+.banner{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) ,url('abstract-blur-luxury-hotel-lobby-and-lounge-for-background-free-photo.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+.logo{
+    width: 140px;
+    cursor: pointer;
+
+}
+
+nav {
+    width: 85%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li::after{
+    content: '';
+    height: 5px;
+    width: 0%;
+    background: #FF5F1F;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+}
+
+nav ul li:hover::after{
+    width: 100%;  
+}
+
+main {
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.signin{
+    margin-right: auto;
+    width: 30px;
+}
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #FF5F1F;
+    margin: 6px 0;
+}
+
+.menu-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+
+.menu-link:hover {
+    background-color: #0056b3;
+}
+
+/* Adventure styling */
+.adventure {
+    margin-bottom:50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.adventure h2 {
+    text-align: center;
+    color: #007bff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.adventure p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.adventure-info {
+    float: left;
+    width: 60%;
+    padding-right: 20px;
+}
+
+.map {
+    width: 65%;
+    margin: auto;
+    display: flex;
+}
+
+.biking, .sailing, .climbing{
+    width: 800px;
+    height: 650px;
+    margin: auto;
+    display: flex;
+}
+
+/* Responsive Navigation Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .banner {
+        background-size: auto; 
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .biking, .sailing, .climbing {
+        max-width: 100%; 
+        height: auto;
+    }
+}

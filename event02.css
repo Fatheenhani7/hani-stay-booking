@@ -1,0 +1,232 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #550c0c;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FF5F1F;
+}
+
+.logo {
+    width: 200px;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url(wedding-background.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+    animation: fadeIn 5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #FF5F1F;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #FF4500;
+}
+
+/* Services section styles */
+.services {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.service {
+    margin-bottom: 40px;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.service p {
+    font-size: 18px;
+}
+
+/* Gallery section styles */
+.gallery {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.gallery h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.wed-img {
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease
+}
+
+.wed-img:hover {
+    transform: translateY(-20px);
+}
+
+/* booking section styles */
+.booking {
+    background-color: #550c0c;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.booking h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.booking p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #550c0c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    header nav ul li {
+        margin-right: 10px;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .services h2 {
+        font-size: 24px;
+    }
+
+    .service h3 {
+        font-size: 20px;
+    }
+
+    .service p {
+        font-size: 16px;
+    }
+
+    .gallery h2 {
+        font-size: 24px;
+    }
+
+    .contact h2 {
+        font-size: 24px;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+    .wed-img {
+        width: 100%; 
+        margin: 0; 
+    }
+}

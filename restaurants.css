@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0; 
+    color: rgb(255, 230, 0);
+}
+
+.banner{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) ,url('abstract-blur-luxury-hotel-lobby-and-lounge-for-background-free-photo.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+.logo{
+    width: 140px;
+    cursor: pointer;
+
+}
+
+nav {
+    width: 85%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li::after{
+    content: '';
+    height: 5px;
+    width: 0%;
+    background: #FF5F1F;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+}
+
+nav ul li:hover::after{
+    width: 100%;  
+}
+
+main {
+    padding: 8px;
+}
+
+.signin{
+    margin-right: auto;
+    width: 30px;
+}
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #FF5F1F;
+    margin: 6px 0;
+}
+
+.menu-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+
+.menu-link:hover {
+    background-color: #0056b3;
+}
+
+
+/* Style for the restaurant sections */
+.restaurant {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+
+.restaurant h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.restaurant img {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.restaurant-description {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #555;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+    transform: scale(0.97);
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+.responsive {
+    padding: 10px;
+    display: flex;
+    width: 25%;
+    margin: auto;
+  }
+
+
+
+
+/* Responsive Navigation Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .banner {
+        background-size: auto; 
+    }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+   
+    .restaurant {
+        padding: 15px;
+    }
+    .restaurant h2 {
+        font-size: 20px;
+    }
+    .restaurant-description {
+        font-size: 14px;
+    }
+    .responsive {
+        width: 50%;
+      }
+}
