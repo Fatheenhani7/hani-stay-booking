@@ -243,11 +243,16 @@ function checkLoyalty() {
 
     let loyaltyPoints = 0;
 
-    existingBookings.forEach(booking => {
-        if (booking.roomType.length > 3) {
-            loyaltyPoints += booking.roomType.length * 20;
-        }
-    });
+    // Retrieve the last booking from the array (current booking)
+    const currentBooking = existingBookings[existingBookings.length - 1];
+
+    const totalRooms = currentBooking.numberOfSingleRooms + currentBooking.numberOfDoubleRooms + currentBooking.numberOfTripleRooms;
+
+
+     if (totalRooms > 3) {
+            loyaltyPoints += totalRooms * 20;
+     }
+    
 
     // Save loyalty points to local storage
     localStorage.setItem('loyaltyPoints', loyaltyPoints);
